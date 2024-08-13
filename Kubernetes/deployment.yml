@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: netflix-app
+  namespace: netflix-app  # Specify the namespace here
   labels:
     app: netflix-app
 spec:
@@ -18,4 +19,4 @@ spec:
       - name: netflix-app
         image: aniket0008/netflix:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080  # Specify the container port here
